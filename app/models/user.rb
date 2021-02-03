@@ -5,13 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, uniqueness: true, presence: true
-  validates :email,
-            format: { with: /^(.+)@(.+)$/, message: "Email invalid" },
-            uniqueness: { case_sensitive: false },
-            length: { minimum: 4, maximum: 254 }
-  validates :password,
-            presence: true,
-            length: { minimum: 6 }
+  validates :email, presence: true
+  #           format: { with: /^(.+)@(.+)$/, message: "Email invalid" },
+  #           uniqueness: { case_sensitive: false },
+  #           length: { minimum: 4, maximum: 254 }
+  validates :password, presence: true, length: { minimum: 6 }
 
   has_many :droids, dependent: :destroy
 end
