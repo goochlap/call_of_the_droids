@@ -4,6 +4,7 @@ class DroidsController < ApplicationController
   end
 
   def show
+    @droid = Droid.find(params[:id])
   end
 
   def create
