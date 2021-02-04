@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_02_193130) do
+ActiveRecord::Schema.define(version: 2021_02_02_193536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(version: 2021_02_02_193130) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "droid_categories", force: :cascade do |t|
+    t.bigint "droid_id", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_droid_categories_on_category_id"
+    t.index ["droid_id"], name: "index_droid_categories_on_droid_id"
   end
 
   create_table "droids", force: :cascade do |t|
@@ -60,5 +69,7 @@ ActiveRecord::Schema.define(version: 2021_02_02_193130) do
 
   add_foreign_key "bookings", "droids"
   add_foreign_key "bookings", "users"
+  add_foreign_key "droid_categories", "categories"
+  add_foreign_key "droid_categories", "droids"
   add_foreign_key "droids", "users"
 end
