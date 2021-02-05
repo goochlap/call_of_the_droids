@@ -1,0 +1,7 @@
+<%= simple_form_for [@droid, @booking] do |f| %>
+  <h3>Book <%= @droid.name %>, owner <%= @droid.user.name %></h3>
+  <br>
+  <%= f.input :start_date, as: :date, html5: true %>
+  <%= f.input :end_date, as: :date, html5: true %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>

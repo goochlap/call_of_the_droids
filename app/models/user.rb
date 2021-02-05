@@ -12,4 +12,5 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }
 
   has_many :droids, dependent: :destroy
+  has_many :bookings, through: :droids
 end
