@@ -1,7 +1,8 @@
 class BookingsController < ApplicationController
   before_action :find_droid, only: %i[new create]
 
-  def index; end
+  def index
+  end
 
   def new
     @booking = Booking.new
@@ -10,8 +11,9 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.droid = @droid
-    if @booking.save
-      redirect_to droids_path
+    @booking.user = current_user
+    if @booking.save!
+      redirect_to new_droid_booking_path
     else
       render :new
     end
