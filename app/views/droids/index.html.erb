@@ -1,6 +1,7 @@
-
-<ul>
-  <% @droids.each do |droid| %>
-    <li><%= link_to droid.name, droid_path(droid)%></li>
-  <% end %>
-</ul>
+<div class="indexdroid">
+  <ul>
+    <% @droids.each do |droid| %>
+      <li><%= link_to droid.name, droid_path(droid)%></li>
+    <% end %>
+  </ul>
+</div>

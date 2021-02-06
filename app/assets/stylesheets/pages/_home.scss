@@ -195,3 +195,49 @@ em.planet.right {
   from{width: 0;}
   to{width: 21.20em;}
 }
+
+// show list css *********************
+
+
+div.showlist {
+
+  position: absolute;
+  top: 150%;
+  left: 43%;
+  margin: 10px;
+  height: 80%;
+  width: 30%;
+  color: white;
+  display: flex;
+  font-size: 300%;
+  text-align: center;
+}
+
+div.showlist li {
+  border: 1px solid white;
+  border-radius: 25%;
+  display: flex inline-block;
+}
+
+// index droid *****************
+
+div.indexdroid {
+
+  position: absolute;
+  top: 300%;
+  left: 43%;
+  margin: 10px;
+  height: 80%;
+  width: 30%;
+  color: white;
+  display: flex;
+  font-size: 300%;
+  text-align: center;
+}
+
+div.indexdroid li {
+  border: 1px solid white;
+  border-radius: 25%;
+  display: flex inline-block;
+}
+
