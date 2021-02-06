@@ -1,9 +1,252 @@
 // Specific CSS for your home-page
+<<<<<<< HEAD
 
 .container-booking {
   padding: 20px;
     h3 {
       padding-top: 12px;
     } 
+=======
+body, html {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://i.pinimg.com/originals/d8/f9/a2/d8f9a275501853fbe521dc3880d17e6e.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 62.5%;
+
+}
+
+// animated droid  ************************
+
+
+h1 {
+  top: 420%;
+  left: 30%;
+  margin: 10px;
+  height: 120vmin;
+  width: 120vmin;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  opacity: 50%;
+  animation: 11s fadeIn;
+  animation-fill-mode: forwards;
+
+  visibility: hidden;
+}
+@keyframes fadeIn {
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+h1:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: -6vmin;
+  left: 50vmin;
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 50%;
+  border: 1.3vmin solid #5d00ff;
+  box-sizing: border-box;
+  opacity: 20%;
+}
+
+em {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  font-size: 8vmin;
+  position: relative;
+  font-style: normal;
+  width: 10vmin;
+  text-align: center;
+  opacity: 20%;
+}
+
+em.planet {
+  -webkit-animation: planet-rotate 3s linear infinite;
+  animation: planet-rotate 3s linear infinite;
+  position: relative;
+}
+
+em.planet::before {
+  content: "";
+  position: absolute;
+  top: -.5vmin;
+  left: 3.5vmin;
+  z-index: -1;
+  width: 13vmin;
+  height: 13vmin;
+  border-radius: 50%;
+}
+
+em.planet.left {
+  -webkit-transform-origin: 40vmin 1vmin;
+  transform-origin: 10vmin 4vmin;
+}
+
+em.planet.right {
+  -webkit-transform-origin: -20vmin 5vmin;
+  transform-origin: -.6vmin 4vmin;
+}
+
+@-webkit-keyframes planet-rotate {
+  to {
+    -webkit-transform: rotate(1turn);
+  }
+}
+
+@keyframes planet-rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.animated {
+  width: 100%;
+  height: 100vh;
+}
+
+// bouton enter site *****************************
+
+
+.button {
+  display: inline-block;
+  border-radius: 50px;
+  background-color: rgba(93, 0, 255, 0);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: absolute;
+  top: 800%;
+  left: 60%;
+  margin: 10px;
+  height: 100%;
+  width: 30%;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+// typewritting ***********************************
+
+
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+
+.line-1{
+    position: absolute;
+    top: 600%;
+    left: 47%;
+    margin: 10px;
+    height: 80%;
+    width: 30%;
+    margin: 0 auto;
+    font-size: 300%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+    color: rgba(255,255,255,.25);
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 21.20em;}
+}
+
+// show list css *********************
+
+
+div.showlist {
+
+  position: absolute;
+  top: 150%;
+  left: 43%;
+  margin: 10px;
+  height: 80%;
+  width: 30%;
+  color: white;
+  display: flex;
+  font-size: 300%;
+  text-align: center;
+}
+
+div.showlist li {
+  border: 1px solid white;
+  border-radius: 25%;
+  display: flex inline-block;
+}
+
+// index droid *****************
+
+div.indexdroid {
+
+  position: absolute;
+  top: 300%;
+  left: 43%;
+  margin: 10px;
+  height: 80%;
+  width: 30%;
+  color: white;
+  display: flex;
+  font-size: 300%;
+  text-align: center;
+}
+
+div.indexdroid li {
+  border: 1px solid white;
+  border-radius: 25%;
+  display: flex inline-block;
+>>>>>>> dd96c9a01513c9629eb508a51c977dac497d1e53
 }
 
