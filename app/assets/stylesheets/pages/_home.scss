@@ -1,4 +1,5 @@
 // Specific CSS for your home-page
+
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
 
 .container-booking {
@@ -19,20 +20,32 @@ html, body {
     font-family: "Quicksand", sans-serif;
     font-size: 62.5%;
 
+body, html {
+  // width: 100%;
+  // height: 100vh;
+  // background-image: url("https://i.pinimg.com/originals/d8/f9/a2/d8f9a275501853fbe521dc3880d17e6e.jpg");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  font-size: 62.5%;
 }
+
 
 // animated droid  ************************
 
 
 h1 {
-  top: 420%;
-  left: 30%;
+  // top: 420%;
+  // left: 30%;
   margin: 10px;
-  height: 120vmin;
+  // height: 120vmin;
   width: 120vmin;
   display: flex;
   justify-content: center;
-  position: absolute;
+  // position: absolute;
   opacity: 50%;
   animation: 11s fadeIn;
   animation-fill-mode: forwards;
@@ -51,7 +64,7 @@ h1 {
 h1:before {
   content: "";
   display: block;
-  position: absolute;
+  // position: absolute;
   z-index: -1;
   top: -6vmin;
   left: 50vmin;
@@ -82,7 +95,7 @@ em.planet {
 
 em.planet::before {
   content: "";
-  position: absolute;
+  // position: absolute;
   top: -.5vmin;
   left: 3.5vmin;
   z-index: -1;
@@ -113,10 +126,10 @@ em.planet.right {
   }
 }
 
-.animated {
-  width: 100%;
-  height: 100vh;
-}
+// .animated {
+//   width: 100%;
+//   height: 100vh;
+// }
 
 // bouton enter site *****************************
 
@@ -132,9 +145,9 @@ em.planet.right {
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
-  position: absolute;
-  top: 800%;
-  left: 60%;
+  // position: absolute;
+  // top: 800%;
+  // left: 60%;
   margin: 10px;
   height: 100%;
   width: 30%;
@@ -174,15 +187,10 @@ em.planet.right {
 /* Global */
 
 .line-1{
-    position: absolute;
-    top: 600%;
-    left: 47%;
-    margin: 10px;
-    height: 80%;
-    width: 30%;
-    margin: 0 auto;
+    // position: absolute;
+    // top: 600%;
+    // left: 47%;
     font-size: 300%;
-    text-align: center;
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);
@@ -204,9 +212,9 @@ em.planet.right {
 
 div.showlist {
 
-  position: absolute;
-  top: 150%;
-  left: 43%;
+  // position: absolute;
+  // top: 150%;
+  // left: 43%;
   margin: 10px;
   height: 80%;
   width: 30%;
@@ -226,9 +234,9 @@ div.showlist li {
 
 div.indexdroid {
 
-  position: absolute;
-  top: 300%;
-  left: 43%;
+  // position: absolute;
+  // top: 300%;
+  // left: 43%;
   margin: 10px;
   height: 80%;
   width: 30%;
@@ -243,3 +251,32 @@ div.indexdroid li {
   border-radius: 25%;
   display: flex inline-block;
 }
+
+// container fixed  ************************
+
+.container-home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+//container background image ***********************
+
+
+.container-background {
+  background-image: url("https://i.pinimg.com/originals/d8/f9/a2/d8f9a275501853fbe521dc3880d17e6e.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.indexview {
+  background-image: url("https://wallpaperaccess.com/full/519164.jpg");
+  background-size: cover ;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+

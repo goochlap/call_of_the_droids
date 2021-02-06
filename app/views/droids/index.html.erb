@@ -1,7 +1,14 @@
-<div class="indexdroid">
-  <ul>
-    <% @droids.each do |droid| %>
-      <li><%= link_to droid.name, droid_path(droid)%></li>
-    <% end %>
-  </ul>
+<div class="indexview">
+  <%= render 'shared/navbar' %>
+  <div class="wrapper">
+    <div class="clash-card">
+      <div class="clash-card__image clash-card__image--barbarian">
+        <img src="https://cdn.pixabay.com/photo/2017/08/30/16/15/c-3po-2697682_640.png" alt="barbarian" />
+      </div>
+      <div class="clash-card__level clash-card__level--barbarian">category </div>
+      <div class="clash-card__unit-name">The Barbarian</div>
+      <div class="clash-card__unit-description">
+        The Barbarian is a kilt-clad Scottish warrior with an angry, battle-ready expression, hungry for destruction. He has Killer yellow horseshoe mustache.
+      </div>
+      <button>booking</button>
 </div>
