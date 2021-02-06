@@ -1,4 +1,10 @@
 // Specific CSS for your home-page
+
+.container-booking {
+  padding: 20px;
+    h3 {
+      padding-top: 12px;
+    } 
 body, html {
   width: 100%;
   height: 100vh;
@@ -240,4 +246,4 @@ div.indexdroid li {
   border-radius: 25%;
   display: flex inline-block;
 }
-
+}
