@@ -1,0 +1,8 @@
+
+<h2><%= current_user.name.capitalize %>'s bookings</h2>
+
+<ul> <% @bookings.each do |booking| %>
+  <li><%= booking.start_date %></li>
+  <li><%= booking.end_date %></li>
+  <% end %>
+</ul>
