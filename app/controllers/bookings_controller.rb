@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :find_droid, only: %i[new create]
 
   def index
-    @bookings = Booking.all
+    @bookings = Booking.where(user_id: current_user)
   end
 
   def new
