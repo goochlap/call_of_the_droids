@@ -1,13 +1,12 @@
 class DroidsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
+  before_action :find_droid, only: %i[show destroy]
 
   def index
     @droids = Droid.all
   end
 
-  def show
-    @droid = Droid.find(params[:id])
-  end
+  def show; end
 
   def new
     @droid = Droid.new
@@ -23,7 +22,17 @@ class DroidsController < ApplicationController
     end
   end
 
+  def destroy
+    @droid.destroy
+
+    redirect_to users_path, notice: 'Droid was successfully Delete'
+  end
+
   private
+
+  def find_droid
+    @droid = Droid.find(params[:id])
+  end
 
   def droid_params
     params.require(:droid).permit(:name, :address, :description, :price, :photo)

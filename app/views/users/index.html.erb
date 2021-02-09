@@ -2,6 +2,8 @@
   
   <ul>
     <% @droids.each do |droid| %>
-      <li><%= droid.name %></li>
+      <li><%= droid.name %>
+        <%= link_to 'delete', droid_path(droid), method: :delete, data: { confirm: 'Are you sure?'} %>
+      </li>
     <% end %>
   </ul>
