@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  def index
+  def show
     @droids = current_user.droids
   end
 end

@@ -1,11 +1,13 @@
-<div class="container-booking">
-    <div class="card-droid">
-      <h1>Book <%= @droid.name %>, owner <%= @droid.user.name %></h1>
+<div class="container-sign-up" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://wallpapercave.com/wp/wp1816224.jpg)">
+    <div class="box-form-position">
+       <div class="form-border">
+          <div class="form-sign-in">
+            <%= simple_form_for [@droid, @booking] do |f| %>
+            <%= f.input :start_date, as: :date, html5: true %>
+            <%= f.input :end_date, as: :date, html5: true %>
+            <%= f.submit "Submit", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
     </div>
-        <h3>Choose your dates</h3> 
-        <%= simple_form_for [@droid, @booking] do |f| %>
-        <%= f.input :start_date, as: :date, html5: true %>
-        <%= f.input :end_date, as: :date, html5: true %>
-        <%= f.submit "Submit", class: "btn btn-primary" %>
-        <% end %>
 </div>
