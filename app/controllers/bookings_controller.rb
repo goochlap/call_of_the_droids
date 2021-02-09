@@ -1,9 +1,6 @@
 class BookingsController < ApplicationController
   before_action :find_droid, only: %i[new create]
 
-  def index
-  end
-
   def new
     @booking = Booking.new
   end
@@ -22,7 +19,7 @@ class BookingsController < ApplicationController
   private
 
   def find_droid
-    @droid = Droid.find(params[:droid_id])
+    @droid = Droid.find(params[:droid_id]) # :droid_id => :id ?
   end
 
   def booking_params
