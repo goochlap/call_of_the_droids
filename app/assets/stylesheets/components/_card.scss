@@ -5,52 +5,6 @@
   padding: 150px;
 }
 
-.card-trip {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 20px white;
-}
-
-.card-trip:hover {
-  box-shadow: 0 0 47px #0065ff;
-}
-
-.card-trip > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.card-trip li {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  font-family: 'Fredoka One', cursive;
-  font-family: 'Orbitron', sans-serif;
-  list-style-type: none;
-}
-
-.card-trip p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-
-
-.card-trip .card-trip-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-  background-image: url("https://img.freepik.com/free-vector/gray-white-gradient-abstract-background_53876-60238.jpg?size=338&ext=jpg");
-}
-
-
-header {
-      width: 45px;
-    height: 92px;
-}
 
 .container-all-droids {
 
@@ -61,7 +15,7 @@ header {
   box-sizing: border-box;
   appearance: none;
   background-color: transparent;
-  border: 2px solid #5d00ff;
+  border: 1px solid #5d00ff;
   border-radius: 0.6em;
   color: #5d00ff;
   cursor: pointer;
@@ -91,10 +45,85 @@ header {
 
 p.description {
 
-  font-family: 'Yellowtail', cursive;
-  font-size: 20px;
+    font-family: 'Yellowtail', cursive;
+    font-size: 20px;
+    margin-right: 197px;
 }
 
 .card-trip-pricing {
-font-family: 'Saira Stencil One', cursive;
+font-family: 'Rock Salt', cursive;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 304px;
+  height: 390px;
+  perspective: 1000px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  box-shadow: 1px 1px 47px -10px #5d00ff;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-image: url("https://www.reunionnaisdumonde.com/IMG/auton1407.jpg?1470218080");
+  color: white;
+  transform: rotateY(180deg);
+  box-shadow: 1px 1px 13px 2px #b4a0d8;
+}
+
+
+.flip-card-back h2 {
+  font-family: 'Michroma', sans-serif;
+
+}
+
+h2.category {
+  font-family: 'Rock Salt', cursive;
+  font-size: 16px;
+}
+
+.flip-card-back button {
+    margin-top: 29px;
+    margin-left: 57px;
+    font-size: 21px;
+}
+
+h2.card-trip-pricing {
+      margin-top: 56px;
+}
+
+.btn-first a:hover {
+
+  color: white;
+
 }

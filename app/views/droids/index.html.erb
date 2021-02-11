@@ -1,21 +1,22 @@
-<%= render 'shared/navbar' %>
 <div class="container-all-droids">
+<%= render 'shared/navbar' %>
   <div class="container-index-droid">
     <% @droids.each do |droid| %>
-    <div class="card-trip">
-      <img src="https://i.pinimg.com/originals/36/75/c2/3675c2f7c59d731cc81a4bc6526b9904.jpg">
-      <div class="card-trip-infos">
-        <div>
-          <li><%= link_to droid.name, droid_path(droid)%></li>
-          <h2>category</h2>
-          <p class="description">Description:</p>
-          <p><%= droid.description %></p>
-          <button class="btn-first"> book now</button>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="https://i.pinimg.com/originals/36/75/c2/3675c2f7c59d731cc81a4bc6526b9904.jpg" alt="Avatar" style="width:304px;height:390px;">
         </div>
-        <h2 class="card-trip-pricing"><%= droid.price %>€</h2>
+        <div class="flip-card-back">
+          <h2><%= droid.name %></h2>
+          <h2 class="category">category</h2>
+          <p class="description">Description:</p>
+          <p><%= droid.description %> blablablablabla. blablablablabla. blablablablabla. blablablablabla. blablablablabla. blablablablabla. </p>
+          <h2 class="card-trip-pricing"><%= droid.price %> eu </h2>
+          <button class="btn-first"><%= link_to "book now", new_droid_booking_path(droid) %></button>
+        </div>
       </div>
     </div>
   <% end %>
   </div>
 </div>
-
