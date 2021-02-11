@@ -1,3 +1,21 @@
 <%= render 'shared/navbar' %>
-<div class="indexview">
+<div class="container-all-droids">
+  <div class="container-index-droid">
+    <% @droids.each do |droid| %>
+    <div class="card-trip">
+      <img src="https://i.pinimg.com/originals/36/75/c2/3675c2f7c59d731cc81a4bc6526b9904.jpg">
+      <div class="card-trip-infos">
+        <div>
+          <li><%= link_to droid.name, droid_path(droid)%></li>
+          <h2>category</h2>
+          <p class="description">Description:</p>
+          <p><%= droid.description %></p>
+          <button class="btn-first"> book now</button>
+        </div>
+        <h2 class="card-trip-pricing"><%= droid.price %>€</h2>
+      </div>
+    </div>
+  <% end %>
+  </div>
 </div>
+
