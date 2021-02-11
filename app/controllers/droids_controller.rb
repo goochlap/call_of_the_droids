@@ -10,6 +10,7 @@ class DroidsController < ApplicationController
 
   def new
     @droid = Droid.new
+    @category = Category.new
   end
 
   def create
