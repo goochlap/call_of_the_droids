@@ -16,7 +16,7 @@ class DroidsController < ApplicationController
     @droid = Droid.new(droid_params)
     @droid.user = current_user
     if @droid.save!
-      redirect_to users_path
+      redirect_to user_path
     else
       render :new
     end

@@ -3,7 +3,11 @@
   <ul>
     <% @droids.each do |droid| %>
       <li><%= droid.name %>
-        <%= link_to 'delete', droid_path(droid), method: :delete, data: { confirm: 'Are you sure?'} %>
+        <%= link_to '[delete]', droid_path(droid), method: :delete, data: { confirm: 'Are you sure?'} %>
+          <% droid.bookings.each do |booking| %>
+             // rent by <%= booking.find_user(booking.user_id) %>
+             // at <%= booking.start_date %> to <%= booking.end_date %>
+          <% end %>
       </li>
     <% end %>
   </ul>
