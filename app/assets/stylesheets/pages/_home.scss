@@ -233,12 +233,9 @@ div.indexdroid li {
 
 .container-booking-index {
   background-image: url("https://cdna.artstation.com/p/assets/images/images/004/283/606/large/ryan-phillips-bb8-revamped.jpg?1482018800");
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100%;
   background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 
 }
@@ -252,6 +249,8 @@ div.indexdroid li {
     padding: 122px;
     margin-left: 48px;
     color: white;
+
+
 }
 
 .background-booking {
