@@ -1,6 +1,5 @@
- <%= render 'shared/navbar' %>
 <div class="container-sign-up new-form">
-    <div class="box-form-position">
+    <div class="box-form-position-sign-in">
        <div class="form-border">
         <div class="form-sign-in">
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -22,14 +21,10 @@
               <%= f.input :password_confirmation,
                           required: true,
                           input_html: { autocomplete: "new-password" } %>
-            <div class="form-actions">
-                  <%= f.button :submit, "Sign up" %>
+              <%= f.button :submit, "Sign up" %>
             </div>
             </div>
           </div>
         </div>
+    <% end %>
   </div>
-
-      <% end %>
- <%= render "devise/shared/links" %>
-</div>

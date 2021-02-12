@@ -3,6 +3,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-image: url("https://image.winudf.com/v2/image1/Y29tLmFwcDNkd2FsbHBhcGVyaGQucm9ib3R3YWxscGFwZXJfc2NyZWVuXzVfMTU2NzAxNDYxMl8wODE/screen-5.jpg?fakeurl=1&type=.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
 }
 
 .image-sign-in {
@@ -11,9 +16,9 @@
   display: block;
 }
 
-.box-form-position {
-  margin-top: 25px;
-  margin-left: -400px;
+.box-form-position-sign-in {
+    margin-top: 80px;
+    margin-left: 900px;
 }
 
 .form-control {
@@ -38,8 +43,6 @@
 }
 
 .form-actions {
-  margin-left: 616px;
-  margin-top: 27px;
   color: white;
 }
 
@@ -55,7 +58,6 @@
 
 .btn {
   font-size: 22px;
-  margin-left: -552px;
   color: white;
 }
 .btn:hover {
@@ -102,4 +104,42 @@ label[for=booking_end_date], [for=booking_start_date] {
   font-family: 'Roboto', sans-serif;
   padding-bottom: 16px;
   font-weight: bolder;
+}
+
+.form-group label.string {
+    color: white;
+    font-size: 22px;
+}
+
+//-----------log in form ----------
+
+.container-log-in-all {
+  background-image: url("https://i.pinimg.com/originals/32/a5/6b/32a56b49ea31183b73393b85db37c81e.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+
+}
+
+.form-check-label {
+  color: white;
+}
+
+.box-form-position-booking {
+    margin-top: 100px;
+    margin-right: 500px;
+}
+
+.form-border {
+    padding: 25px;
+    border: 1px solid white;
+    border-radius: 14% / 14%;
+    background-color: rgba(175, 175, 175, .5)
+
+
 }
