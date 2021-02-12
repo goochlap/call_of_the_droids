@@ -41,7 +41,10 @@ spy = { name: 'spy'}
 healer = { name: 'healer'}
 
 [ protocol, combat, spy, healer ].each do |attributes|
-    category = Category.create!(attributes)
+    category = Category.new(attributes)
+    category.droid_id = Droid.all.first
+    category.save!
+
     puts "Created #{category.name}"
   end
 
