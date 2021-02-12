@@ -5,7 +5,11 @@
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
+        <% if droid.photo.attached? %>
+          <img src="<%= cl_image_tag droid.photo.key %>" alt="Avatar" style="width:304px;height:390px;">
+          <% else %>
           <img src="https://i.pinimg.com/originals/36/75/c2/3675c2f7c59d731cc81a4bc6526b9904.jpg" alt="Avatar" style="width:304px;height:390px;">
+          <% end %>
         </div>
         <div class="flip-card-back">
           <h2><%= droid.name %></h2>
