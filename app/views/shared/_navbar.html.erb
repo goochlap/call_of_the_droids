@@ -8,8 +8,8 @@
     <ul class="navlinks">
       <li><%= link_to "Droids", droids_path, id: "box1" %></li>
         <% if user_signed_in? %>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete, id: "box1" %></li>
-        <li><%= current_user.name %></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete, id: "box5" %></li>
+        <li><%= link_to "#{current_user.name.capitalize}", user_path(current_user.id), id: :name_navbar %></li>
         <% else %>
         <li><%= link_to 'Sign up', new_user_registration_path, id: "box3" %></li>
         <li><%= link_to 'Log in', new_user_session_path, id: "box4" %></li>
