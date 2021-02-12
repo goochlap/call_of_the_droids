@@ -1,14 +1,19 @@
 .container-index-droid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 160px;
-  padding: 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 12px;
+    padding: 122px;
+    margin-left: 48px;
 }
 
 
 .container-all-droids {
 
- background-color: black;
+ background-image: url("https://images8.alphacoders.com/103/1036154.jpg");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
 }
 
 .btn-first {
@@ -57,9 +62,10 @@ font-family: 'Rock Salt', cursive;
 
 .flip-card {
   background-color: transparent;
-  width: 304px;
-  height: 390px;
+  width: 314px;
+  height: 430px;
   perspective: 1000px;
+  margin-top: 100px;
 }
 
 /* This container is needed to position the front and back side */
@@ -104,7 +110,7 @@ font-family: 'Rock Salt', cursive;
 
 
 .flip-card-back h2 {
-  font-family: 'Michroma', sans-serif;
+  font-family: 'Archivo', sans-serif;
 
 }
 
@@ -114,13 +120,13 @@ h2.category {
 }
 
 .flip-card-back button {
-    margin-top: 29px;
+    margin-top: 15px;
     margin-left: 57px;
     font-size: 21px;
 }
 
 h2.card-trip-pricing {
-      margin-top: 56px;
+
 }
 
 .btn-first a:hover {

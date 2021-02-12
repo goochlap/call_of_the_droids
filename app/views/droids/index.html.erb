@@ -6,9 +6,9 @@
       <div class="flip-card-inner">
         <div class="flip-card-front">
         <% if droid.photo.attached? %>
-          <img src="<%= cl_image_tag droid.photo.key %>" alt="Avatar" style="width:304px;height:390px;">
+          <img src="<%= cl_image_tag droid.photo.key %>" alt="Avatar" style="width:314px;height:430px;">
           <% else %>
-          <img src="https://i.pinimg.com/originals/36/75/c2/3675c2f7c59d731cc81a4bc6526b9904.jpg" alt="Avatar" style="width:304px;height:390px;">
+          <img src="https://i.pinimg.com/originals/36/75/c2/3675c2f7c59d731cc81a4bc6526b9904.jpg" alt="Avatar" style="width:314px;height:430px;">
           <% end %>
         </div>
         <div class="flip-card-back">
@@ -20,8 +20,8 @@
                   <% end %></li>
             </ul>
           <p class="description">Description:</p>
-          <p><%= droid.description %> blablablablabla. blablablablabla. blablablablabla. blablablablabla. blablablablabla. blablablablabla. </p>
-          <h2 class="card-trip-pricing"><%= droid.price %> eu </h2>
+          <p><%= droid.description %></p>
+          <h2 class="card-trip-pricing">$<%= droid.price %></h2>
           <button class="btn-first"><%= link_to "book now", new_droid_booking_path(droid) %></button>
         </div>
       </div>
