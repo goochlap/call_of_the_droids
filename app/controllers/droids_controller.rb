@@ -16,7 +16,8 @@ class DroidsController < ApplicationController
     @droid = Droid.new(droid_params)
     @droid.user = current_user
     if @droid.save!
-      redirect_to user_path
+      save_categories(@droid)
+      redirect_to user_path(current_user)
     else
       render :new
     end
@@ -25,7 +26,7 @@ class DroidsController < ApplicationController
   def destroy
     @droid.destroy
 
-    redirect_to users_path, notice: 'Droid was successfully Delete'
+    redirect_to user_path(current_user), notice: 'Droid was successfully Delete'
   end
 
   private
@@ -35,6 +36,15 @@ class DroidsController < ApplicationController
   end
 
   def droid_params
-    params.require(:droid).permit(:name, :address, :description, :price, :photo)
+    params.require(:droid).permit(:name, :address, :description, :price, :photo, :category_ids)
+  end
+
+  def save_categories(droid)
+    params[:droid][:category_ids].each do |category_id|
+      if category_id != ''
+        # name = Category.find(category_id).name
+        Category.create!(name: category_id, droid: droid)
+      end
+    end
   end
 end
