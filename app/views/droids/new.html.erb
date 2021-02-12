@@ -4,6 +4,7 @@
 <%= f.input :address %>
 <%= f.input :description %>
 <%= f.input :price %>
+<%= f.input :photo, as: :file %>
 <%= f.association :categories, as: :check_boxes, collection: ['Protocol', 'Fight', 'Spy', 'Medic', 'Entertainment'] %>
 <%= f.submit "Submit", class: "btn btn-primary btn-lg btn-block" %>
 <% end %>

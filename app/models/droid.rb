@@ -4,4 +4,6 @@ class Droid < ApplicationRecord
 
   has_many :bookings
   has_many :categories, dependent: :destroy
+
+  has_one_attached :photo
 end

@@ -95,7 +95,8 @@ font-family: 'Rock Salt', cursive;
 
 /* Style the back side */
 .flip-card-back {
-  background-image: url("https://www.reunionnaisdumonde.com/IMG/auton1407.jpg?1470218080");
+  background-image: url("https://res.cloudinary.com/dhtd0cg7t/image/upload/v1613139628/metal_xnqh3s.jpg");
+  background-size: cover;
   color: white;
   transform: rotateY(180deg);
   box-shadow: 1px 1px 13px 2px #b4a0d8;

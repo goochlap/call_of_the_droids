@@ -1,28 +1,24 @@
 .container-sign-up {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .image-sign-in {
-
-        max-width: 100%;
-        max-height: 100%;
-        display: block;
-
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
 }
 
 .box-form-position {
-    margin-top: 25px;
-    margin-left: -400px;
+  margin-top: 25px;
+  margin-left: -400px;
 }
 
 .form-control {
-
-    width: 400px;
-    height: 030px;
+  width: 400px;
+  height: 030px;
 }
 
 .email {
@@ -32,58 +28,78 @@
 
 .password {
   font-size: 22px;
-   color: white;
+  color: white;
 }
 
 .form-text {
-      margin-left: 111px;
-      opacity: 50%;
-      color: white;
+  margin-left: 111px;
+  opacity: 50%;
+  color: white;
 }
 
 .form-actions {
-    margin-left: 616px;
-    margin-top: 27px;
-    color: white;
+  margin-left: 616px;
+  margin-top: 27px;
+  color: white;
 }
 
 .a {
-    color: white;
-    text-decoration: none;
-    background-color: blue;
-    margin-left: 614px;
-    font-size: 20px;
-    border: 1px solid blue;
-    border-radius: 15%;
+  color: white;
+  text-decoration: none;
+  background-color: blue;
+  margin-left: 614px;
+  font-size: 20px;
+  border: 1px solid blue;
+  border-radius: 15%;
 }
 
 .btn {
-    font-size: 22px;
-    margin-left: -552px;
-    color: white;
+  font-size: 22px;
+  margin-left: -552px;
+  color: white;
 }
 .btn:hover {
-color: white;
-border: 1px solid grey;
-border-radius: 25%;
+  color: white;
+  border: 1px solid grey;
+  border-radius: 25%;
 }
 
 .btn-log-in {
-    font-size: 22px;
-    margin-left: -400px;
-    color: white;
-    margin-top: 49px;
-
+  font-size: 22px;
+  margin-left: -400px;
+  color: white;
+  margin-top: 49px;
 }
 
 div.image-sign-in img {
-
-    width: 200px;
-    height: 240px;
-    margin-bottom: -41px;
-    margin-left: 110px;
+  width: 200px;
+  height: 240px;
+  margin-bottom: -41px;
+  margin-left: 110px;
 }
 
 .form-control {
   color: black;
+}
+
+// -----Booking form------
+
+label[for=booking_end_date], [for=booking_start_date] {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+.form-actions.booking {
+  margin-left: 616px;
+  margin-top: 27px;
+  color: white;
+  margin-left: 680px;
+}
+.nav.nav_booking {
+  background-color: transparent !important;
+}
+#droid-title-form {
+  color: #B18762;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 16px;
+  font-weight: bolder;
 }
