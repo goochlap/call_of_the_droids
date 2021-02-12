@@ -21,12 +21,7 @@
   height: 030px;
 }
 
-.email {
-  font-size: 22px;
-  color: white;
-}
-
-.password {
+.email, .user_name, .password {
   font-size: 22px;
   color: white;
 }
@@ -38,7 +33,7 @@
 }
 
 .form-actions {
-  margin-left: 616px;
+  margin-left: 692px;
   margin-top: 27px;
   color: white;
 }
@@ -93,9 +88,6 @@ label[for=booking_end_date], [for=booking_start_date] {
   margin-top: 27px;
   color: white;
   margin-left: 680px;
-}
-.nav.nav_booking {
-  background-color: transparent !important;
 }
 #droid-title-form {
   color: #B18762;
