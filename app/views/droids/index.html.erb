@@ -9,7 +9,12 @@
         </div>
         <div class="flip-card-back">
           <h2><%= droid.name %></h2>
-          <h2 class="category">category</h2>
+          <h2 class="category">Categories</h2>
+            <ul>
+              <li><% droid.categories.each do |category| %>
+                    <%= category.name %>
+                  <% end %></li>
+            </ul>
           <p class="description">Description:</p>
           <p><%= droid.description %> blablablablabla. blablablablabla. blablablablabla. blablablablabla. blablablablabla. blablablablabla. </p>
           <h2 class="card-trip-pricing"><%= droid.price %> eu </h2>
