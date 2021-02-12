@@ -2,6 +2,23 @@
 
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
 
+//---------html-------------
+
+
+
+html {
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+//------------------------
+
 .container-booking {
   padding: 20px;
     h3 {
@@ -214,13 +231,38 @@ div.indexdroid li {
 
 }
 
-.container-sign-up {
-
-  background-image: url("https://images7.alphacoders.com/601/601841.jpg");
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
+.container-booking-index {
+  background-image: url("https://cdna.artstation.com/p/assets/images/images/004/283/606/large/ryan-phillips-bb8-revamped.jpg?1482018800");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 
 }
 
+.booking-info {
+    text-align: center;
+    margin-right: 400px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 12px;
+    padding: 122px;
+    margin-left: 48px;
+    color: white;
+}
+
+.background-booking {
+    border: 1px solid white;
+    border-radius: 5% / 25%;
+    background-color: rgba(175, 175, 175, .2);
+    margin-bottom: 34px;
+    padding: 10px;
+
+}
+
+.background-booking ul {
+    margin-left: -35px;
+}

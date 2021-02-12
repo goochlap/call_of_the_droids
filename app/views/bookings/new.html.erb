@@ -1,16 +1,13 @@
-<%= render 'shared/navbar', class: :nav_booking %>
 <div class="container-sign-up" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dhtd0cg7t/image/upload/v1613036245/walle_qomlqi.jpg)">
-    <div class="box-form-position">
+    <div class="box-form-position-booking">
        <div class="form-border">
           <div class="form-sign-in">
             <h3 id="droid-title-form"><%= @droid.name %>'s booking</h3>
             <%= simple_form_for [@droid, @booking] do |f| %>
               <%= f.input :start_date, as: :date, html5: true, id: :input_date %>
               <%= f.input :end_date, as: :date, html5: true, id: :input_date %>
-              <div class="form-actions booking">
-                <%= f.button :submit, "Book Now" %>
-              </div>
-              <% end %>            
+              <%= f.button :submit, "Book Now" %>
+              <% end %>
           </div>
         </div>
     </div>
