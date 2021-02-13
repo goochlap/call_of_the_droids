@@ -21,6 +21,12 @@ class BookingsController < ApplicationController
     end
   end
 
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to user_path(current_user), notice: 'booking was successfully Delete'
+  end
+
   private
 
   def find_droid

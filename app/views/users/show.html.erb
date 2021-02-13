@@ -9,23 +9,25 @@
               <% if DateTime.now > booking.start_date %><span id="date-expired">🔴 EXPIRED</span>
               <% end %>
               </p>
-            </div>
+<!--               <%= link_to '[delete]', user_booking_path(booking), method: :delete, data: { confirm: 'Are you sure?'} %>
+ -->            </div>
           <% end %>
           </ul>
     </div>
     <div class="item2 col-6">
       <h2>My droids list</h2>
-      <ul>
         <% @droids.each do |droid| %>
-          <li><%= droid.name %>
+           <div class="item-border">
+            <h2><%= droid.name %></h2>
             <%= link_to '[delete]', droid_path(droid), method: :delete, data: { confirm: 'Are you sure?'} %>
-              <% droid.bookings.each do |booking| %>
-                 // rent by <%= booking.find_user(booking.user_id) %>
-                 // at <%= booking.start_date %> to <%= booking.end_date %>
-              <% end %>
-          </li>
+            <% droid.bookings.each do |booking| %>
+            <p>
+              // rent by <%= booking.find_user(booking.user_id) %>
+              // at <%= booking.start_date %> to <%= booking.end_date %>
+            </p>
+            <% end %>
+           </div>
         <% end %>
-      </ul>
-  </div>
+    </div>
   </div>
 </div>
