@@ -1,5 +1,9 @@
+  
 <div class="container-all-droids">
   <div class="container-index-droid">
+    <div id="map"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     <% @droids.each do |droid| %>
     <div class="flip-card">
       <div class="flip-card-inner">
@@ -11,7 +15,7 @@
           <% end %>
         </div>
         <div class="flip-card-back">
-          <h2 id="droid-name"><%= droid.name %></h2>
+          <h2 id="droid-name"><%= droid.name.capitalize %></h2>
           <h2 class="category">Categories</h2>
             <ul id="category-list">
               <% droid.categories.each do |category| %>
