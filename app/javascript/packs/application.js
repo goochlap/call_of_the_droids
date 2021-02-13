@@ -1,9 +1,3 @@
-const audio = new Audio('assets/jarvis.mp3');
-console.log(audio);
-window.addEventListener("DOMContentLoaded", event => {
-  audio.volume = 1;
-  audio.play();
-});
 
 
 
@@ -31,6 +25,12 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 
+const audio = new Audio('assets/jarvis.mp3');
+console.log(audio);
+window.addEventListener("DOMContentLoaded", event => {
+  audio.volume = 1;
+  audio.play();
+});
 // External imports
 import "bootstrap";
 
