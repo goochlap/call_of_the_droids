@@ -86,6 +86,10 @@
   box-shadow: 1px 1px 47px -10px #5d00ff;
 }
 
+.flip-card-front img {
+  object-fit: cover;
+}
+
 /* Style the back side */
 .flip-card-back {
   background-image: url("https://res.cloudinary.com/dhtd0cg7t/image/upload/v1613139628/metal_xnqh3s.jpg");
