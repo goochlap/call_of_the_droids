@@ -10,7 +10,7 @@
       <% if user_signed_in? %>
     <li><%= link_to "Log out", destroy_user_session_path, method: :delete, id: "box6" %></li>
     <li><%= link_to 'rent your robot',  new_droid_path, id: "box5" %></li>
-    <li><%= link_to 'my profile', user_bookings_path(current_user), id: "box7" %></li>
+    <li><%= link_to 'my profile', user_path(current_user), id: "box7" %></li>
 
       <% else %>
     <li><%= link_to 'Sign up', new_user_registration_path, id: "box3" %></li>
