@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     @booking.droid = @droid
     @booking.user = current_user
     if @booking.save
-      redirect_to user_bookings_path(current_user)
+      redirect_to user_path(current_user)
     else
       render :new
     end

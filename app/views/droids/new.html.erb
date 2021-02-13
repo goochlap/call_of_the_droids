@@ -1,6 +1,6 @@
 <div class="container-form-new-droids">
   <div class="new-droids-form">
-          <h1>New droid</h1>
+          <h2 class="new-droids-form-h1">New droid</h2>
           <%= simple_form_for @droid do |f| %>
           <%= f.input :name %>
           <%= f.input :address %>
@@ -8,7 +8,7 @@
           <%= f.input :price %>
           <%= f.input :photo, as: :file %>
           <%= f.association :categories, as: :check_boxes, collection: ['Protocol', 'Fight', 'Spy', 'Medic', 'Entertainment'] %>
-          <%= f.submit "Submit", class: "btn btn-primary btn-lg btn-block" %>
+          <%= f.submit "Submit", class: "btn" %>
           <% end %>
   </div>
 </div>
