@@ -1,12 +1,28 @@
-  <h1>Users droids</h1>
-  <ul>
-    <% @droids.each do |droid| %>
-      <li><%= droid.name %>
-        <%= link_to '[delete]', droid_path(droid), method: :delete, data: { confirm: 'Are you sure?'} %>
-          <% droid.bookings.each do |booking| %>
-             // rent by <%= booking.find_user(booking.user_id) %>
-             // at <%= booking.start_date %> to <%= booking.end_date %>
+<div class="container-booking-index">
+  <div class="item-box">
+    <div class="item col-6">
+        <h2><%= current_user.name.capitalize %>'s bookings</h2>
+          <ul><% @bookings.each do |booking| %>
+            <div class="item-border">
+              <h2><%= booking.droid.name %></h2>
+              <p>session start at:<%= booking.start_date %>     --      session finish at:<%= booking.end_date %></p>
+            </div>
           <% end %>
-      </li>
-    <% end %>
-  </ul>
+          </ul>
+    </div>
+    <div class="item2 col-6">
+      <h2>My droids list</h2>
+      <ul>
+        <% @droids.each do |droid| %>
+          <li><%= droid.name %>
+            <%= link_to '[delete]', droid_path(droid), method: :delete, data: { confirm: 'Are you sure?'} %>
+              <% droid.bookings.each do |booking| %>
+                 // rent by <%= booking.find_user(booking.user_id) %>
+                 // at <%= booking.start_date %> to <%= booking.end_date %>
+              <% end %>
+          </li>
+        <% end %>
+      </ul>
+  </div>
+  </div>
+</div>

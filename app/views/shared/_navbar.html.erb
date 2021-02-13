@@ -6,18 +6,18 @@
   </div>
   <div id="mainListDiv" class="main_list">
     <ul class="navlinks">
-      <li><%= link_to "Droids", droids_path, id: "box1" %></li>
-        <% if user_signed_in? %>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete, id: "box6" %></li>
-        <li><%= link_to 'rent your robot',  new_droid_path, id: "box5" %></li>
-        <li><%= link_to 'my profile', user_bookings_path(current_user), id: "box7" %></li>
+    <li><%= link_to "Droids", droids_path, id: "box1" %></li>
+      <% if user_signed_in? %>
+    <li><%= link_to "Log out", destroy_user_session_path, method: :delete, id: "box6" %></li>
+    <li><%= link_to 'rent your robot',  new_droid_path, id: "box5" %></li>
+    <li><%= link_to 'my profile', user_bookings_path(current_user), id: "box7" %></li>
 
-        <% else %>
-        <li><%= link_to 'Sign up', new_user_registration_path, id: "box3" %></li>
-        <li><%= link_to 'Log in', new_user_session_path, id: "box4" %></li>
-        <li><%= link_to 'rent your robot',  new_droid_path, id: "box5" %></li>
+      <% else %>
+    <li><%= link_to 'Sign up', new_user_registration_path, id: "box3" %></li>
+    <li><%= link_to 'Log in', new_user_session_path, id: "box4" %></li>
+    <li><%= link_to 'rent your robot',  new_droid_path, id: "box5" %></li>
 
-        <% end %>
+    <% end %>
     </ul>
   </div>
 </div>
