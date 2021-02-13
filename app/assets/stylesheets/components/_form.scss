@@ -59,11 +59,13 @@
 .btn {
   font-size: 22px;
   color: white;
+  border: 1px solid blue;
 }
 .btn:hover {
   color: white;
-  border: 1px solid grey;
+  border: 1px solid blue;
   border-radius: 25%;
+  background-color: rgba(66, 66, 255, 0.8);
 }
 
 .btn-log-in {
