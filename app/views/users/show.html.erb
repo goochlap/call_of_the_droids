@@ -5,7 +5,10 @@
           <ul><% @bookings.each do |booking| %>
             <div class="item-border">
               <h2><%= booking.droid.name %></h2>
-              <p>session start at:<%= booking.start_date %>     --      session finish at:<%= booking.end_date %></p>
+              <p>session start at:<%= booking.start_date %>     --      session finish at:<%= booking.end_date %>
+              <% if DateTime.now > booking.start_date %><span id="date-expired">🔴 EXPIRED</span>
+              <% end %>
+              </p>
             </div>
           <% end %>
           </ul>
