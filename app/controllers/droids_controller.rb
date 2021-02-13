@@ -15,7 +15,7 @@ class DroidsController < ApplicationController
   def create
     @droid = Droid.new(droid_params)
     @droid.user = current_user
-    if @droid.save!
+    if @droid.save
       save_categories(@droid)
       redirect_to user_path(current_user)
     else
