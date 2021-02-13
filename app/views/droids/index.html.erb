@@ -11,16 +11,16 @@
           <% end %>
         </div>
         <div class="flip-card-back">
-          <h2><%= droid.name %></h2>
+          <h2 id="droid-name"><%= droid.name %></h2>
           <h2 class="category">Categories</h2>
-            <ul>
-              <li><% droid.categories.each do |category| %>
-                    <%= category.name %>
-                  <% end %></li>
+            <ul id="category-list">
+              <% droid.categories.each do |category| %>
+                    | <%= category.name %> |
+                  <% end %>
             </ul>
-          <p class="description">Description:</p>
+          <p class="description">Description</p>
           <p><%= droid.description %></p>
-          <h2 class="card-trip-pricing">$<%= droid.price %></h2>
+          <h2 class="card-trip-pricing">$<%= droid.price %> / Days</h2>
           <button class="btn-first"><%= link_to "book now", new_droid_booking_path(droid) %></button>
         </div>
       </div>
