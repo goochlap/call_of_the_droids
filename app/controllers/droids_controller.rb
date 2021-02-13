@@ -4,6 +4,13 @@ class DroidsController < ApplicationController
 
   def index
     @droids = Droid.all
+
+    @markers = @droids.geocoded.map do |droid|
+      {
+        lat: droid.latitude,
+        lng: droid.longitude
+      }
+    end
   end
 
   def show; end
