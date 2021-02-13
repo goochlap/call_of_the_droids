@@ -1,21 +1,17 @@
 .container-index-droid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 12px;
-    padding: 122px;
-    margin-left: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 12px;
+  padding: 122px;
+  margin-left: 48px;
 }
-
-
 .container-all-droids {
-
  background-image: url("https://images8.alphacoders.com/103/1036154.jpg");
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
  background-attachment: fixed;
 }
-
 .btn-first {
   box-sizing: border-box;
   appearance: none;
@@ -47,18 +43,6 @@
     box-shadow: 0 0 40px 40px #5d00ff inset;
   }
 }
-
-p.description {
-
-    font-family: 'Yellowtail', cursive;
-    font-size: 20px;
-    margin-right: 197px;
-}
-
-.card-trip-pricing {
-font-family: 'Rock Salt', cursive;
-}
-
 
 .flip-card {
   background-color: transparent;
@@ -107,30 +91,36 @@ font-family: 'Rock Salt', cursive;
   transform: rotateY(180deg);
   box-shadow: 1px 1px 13px 2px #b4a0d8;
 }
-
-
-.flip-card-back h2 {
-  font-family: 'Archivo', sans-serif;
-
+#droid-name {
+  font-family: $headers-font;
+  font-size: 36px;
+  padding-top: 16px;
+  color: #05ADF7;
 }
-
+p.description {
+  font-family: $body-font;
+  font-size: 20px;
+  margin: auto;
+  padding: 12px 0 12px 0;
+}
 h2.category {
-  font-family: 'Rock Salt', cursive;
-  font-size: 16px;
+  font-size: 22px;
+  font-family: $body-font;
+  padding: 16px 0 6px 0;
 }
-
+#category-list {
+  padding-right: 34px;
+}
+.card-trip-pricing {
+  font-family: $body-font;
+  padding-top: 24px;
+  color: #f9f871;
+  }
 .flip-card-back button {
-    margin-top: 15px;
+    margin-top: 60px;
     margin-left: 57px;
     font-size: 21px;
 }
-
-h2.card-trip-pricing {
-
-}
-
 .btn-first a:hover {
-
   color: white;
-
 }

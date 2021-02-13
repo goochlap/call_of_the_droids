@@ -3,14 +3,22 @@
 
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$headers-font:'Roboto Slab', serif;
 
+@font-face {
+  font-family: 'Mandalore-laser';
+  src: url('Fonts/mandalorelaser.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Cosmo';
+  src: url('Fonts/Cosmology.ttf') format('truetype');
+}
 // To use a font file (.woff) uncomment following lines
 // @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
+//   font-family: "Robotic";
+//   src: url('Fonts/Robotic.otf') format('truetype');
+  // src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+  //      font-url('FontFile.woff') format('woff'),
+  //      font-url('FontFile.ttf') format('truetype')
 // }
-// $my-font: "Font Name";
+// $my-font: "Robotic";
