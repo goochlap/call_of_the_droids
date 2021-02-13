@@ -3,7 +3,6 @@
 
 .nav {
     justify-content: space-between;
-    position: fixed;
     top: 0;
     left: 0;
     height: 4.2em;
@@ -12,6 +11,7 @@
     padding: 0px 5px;
     box-shadow: 1px -5px 21px #777;
     background-color: transparent;
+    transition: 0.4s background-color ease;
 
 
 }
@@ -20,9 +20,10 @@
 //   background-color: transparent;
 //   transition: 0.5s background-color ease;
 // }
-// .navbar-default-black{
-//   background-color: #000;
-// }
+.navbar-default-black{
+  background-color: #000;
+  z-index: 5;
+}
 
 // logo ***************************
 
