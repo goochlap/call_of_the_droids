@@ -108,7 +108,7 @@ label[for=booking_end_date], [for=booking_start_date] {
   font-weight: bolder;
 }
 
-.form-group label.string {
+.form-group label.string, .droid_price{
     color: white;
     font-size: 22px;
 }
@@ -117,6 +117,12 @@ label[for=booking_end_date], [for=booking_start_date] {
 }
 
 //-----------log in form ----------
+
+.form-sign-in h2 {
+  color: $my-primary-color;
+  font-family: $headers-font;
+  padding-bottom: 12px;
+}
 
 .container-log-in-all {
   background-image: url("https://i.pinimg.com/originals/32/a5/6b/32a56b49ea31183b73393b85db37c81e.jpg");
@@ -136,8 +142,8 @@ label[for=booking_end_date], [for=booking_start_date] {
 }
 
 .box-form-position-booking {
-    margin-top: 100px;
-    margin-right: 500px;
+  margin-top: 100px;
+  margin-right: 500px;
 }
 
 .form-border {
@@ -145,8 +151,6 @@ label[for=booking_end_date], [for=booking_start_date] {
     border: 1px solid white;
     border-radius: 14% / 14%;
     background-color: rgba(175, 175, 175, .5)
-
-
 }
 
 .container-form-new-droids {
@@ -161,4 +165,7 @@ label[for=booking_end_date], [for=booking_start_date] {
   min-height: 100vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+.text-muted {
+  color: white !important; 
 }

@@ -1,16 +1,15 @@
 <div class="container-booking-index">
   <div class="item-box">
     <div class="item col-6">
-        <h2><%= current_user.name.capitalize %>'s bookings</h2>
+        <h2 id="booking-title"><%= current_user.name.capitalize %>'s bookings</h2>
           <ul><% @bookings.each do |booking| %>
             <div class="item-border">
-              <h2><%= booking.droid.name %></h2>
+              <h2><%= booking.droid.name.capitalize %></h2>
               <p>session start at:<%= booking.start_date %>     --      session finish at:<%= booking.end_date %>
-              <% if DateTime.now > booking.start_date %><span id="date-expired">🔴 EXPIRED</span>
+              <% if DateTime.now > booking.end_date + 1 %><span id="date-expired">🔴 EXPIRED</span>
               <% end %>
               </p>
-<!--               <%= link_to '[delete]', user_booking_path(booking), method: :delete, data: { confirm: 'Are you sure?'} %>
- -->            </div>
+            </div>
           <% end %>
           </ul>
     </div>
@@ -18,7 +17,7 @@
       <h2>My droids list</h2>
         <% @droids.each do |droid| %>
            <div class="item-border">
-            <h2><%= droid.name %></h2>
+            <h2><%= droid.name.capitalize %></h2>
             <%= link_to '[delete]', droid_path(droid), method: :delete, data: { confirm: 'Are you sure?'} %>
             <% droid.bookings.each do |booking| %>
             <p>
