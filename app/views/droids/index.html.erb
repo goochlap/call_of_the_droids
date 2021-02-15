@@ -9,7 +9,7 @@
       <div class="flip-card-inner">
         <div class="flip-card-front">
         <% if droid.photo.attached? %>
-          <img src="https://wallpaperaccess.com/full/519192.jpg" alt="Avatar" style="width:314px;height:430px;">
+          <%= cl_image_tag droid.photo.key, height: 430, width: 314, crop: :fill %>
           <% else %>
           <img src="https://wallpaperaccess.com/full/519192.jpg" alt="Avatar" style="width:314px;height:430px;">
           <% end %>

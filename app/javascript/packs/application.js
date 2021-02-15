@@ -35,6 +35,7 @@ window.addEventListener("DOMContentLoaded", event => {
 import "bootstrap";
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { initMapbox } from '../plugins/init_mapbox';
+import { initAutocomplete } from '../plugins/init_autocomplete';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -47,6 +48,8 @@ document.addEventListener('turbolinks:load', () => {
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
 })
+
+initAutocomplete();
 
 // document.addEventListener('turbolinks:load', () => {
 //   // Call your JS functions here

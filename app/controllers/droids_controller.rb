@@ -8,7 +8,8 @@ class DroidsController < ApplicationController
     @markers = @droids.geocoded.map do |droid|
       {
         lat: droid.latitude,
-        lng: droid.longitude
+        lng: droid.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { droid: droid })
       }
     end
   end
