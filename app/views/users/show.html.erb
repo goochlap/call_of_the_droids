@@ -5,9 +5,10 @@
           <ul><% @bookings.each do |booking| %>
             <div class="item-border">
               <h2><%= booking.droid.name.capitalize %></h2>
-              <p>session start at:<%= booking.start_date %>     --      session finish at:<%= booking.end_date %>
-              <% if DateTime.now > booking.end_date + 1 %><span id="date-expired">🔴 EXPIRED</span>
-              <% end %>
+              <p>Session start at: <strong><%= booking.start_date.to_time.strftime('%B %e, %Y') %></strong>
+                  --      Session finish at: <strong><%= booking.end_date.to_time.strftime('%B %e, %Y') %></strong>
+                <% if DateTime.now > booking.end_date + 1 %><span id="date-expired">🔴 EXPIRED</span>
+                <% end %>
               </p>
             </div>
           <% end %>
@@ -21,8 +22,8 @@
             <%= link_to '[delete]', droid_path(droid), method: :delete, data: { confirm: 'Are you sure?'} %>
             <% droid.bookings.each do |booking| %>
             <p>
-              // rent by <%= booking.find_user(booking.user_id) %>
-              // at <%= booking.start_date %> to <%= booking.end_date %>
+              // Rent by <%= booking.find_user(booking.user_id).capitalize %>
+              // at <strong><%= booking.start_date.to_time.strftime('%B %e, %Y') %></strong> to <strong><%= booking.end_date.to_time.strftime('%B %e, %Y') %></strong>
             </p>
             <% end %>
            </div>

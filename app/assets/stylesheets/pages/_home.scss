@@ -4,6 +4,19 @@
 
 $my-primary-color: #05ADF7;
 
+.footer {
+  background-color: transparent;
+  color: #676366;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
 .container-booking {
   padding: 20px;
     h3 {
@@ -132,7 +145,6 @@ em.planet.right {
 }
 .button span a {
   color: white;
-
 }
 .button span:after {
   content: '\00bb';

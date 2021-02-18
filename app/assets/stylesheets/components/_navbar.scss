@@ -1,19 +1,16 @@
 // navbar ****************************
 
-
 .nav {
-    justify-content: space-between;
-    top: 0;
-    left: 0;
-    height: 4.2em;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0px 5px;
-    box-shadow: 1px -5px 21px #777;
-    background-color: transparent;
-    transition: 0.4s background-color ease;
-
-
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  height: 4.2em;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px 5px;
+  box-shadow: 1px -5px 21px #777;
+  background-color: transparent;
+  transition: 0.4s background-color ease;
 }
 
 // .navbar-default{
