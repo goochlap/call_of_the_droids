@@ -1,1 +1,6 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# Call Of The Droids
+
+- Build a simple airbnb clone
+- Rent droids as well as rent your own droid. 
+
+https://call-of-the-droids.herokuapp.com/
